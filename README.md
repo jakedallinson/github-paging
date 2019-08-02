@@ -12,10 +12,22 @@ If a GH access token is given, then public and private members can be returned f
 
 ## Usage
 
-`var paging = require('github-paging');`
+```
+var paging = require('github-paging');
+let url = 'https://api.github.com/orgs/Comcast/members?access_token=' + <access_token> + '&per_page=100'
+paging(url, (err, pages) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(pages.length);
+});
+```
 
 ## Tests
 
 `no tests available yet`
 
 ## Contributing
+
+coming soon
