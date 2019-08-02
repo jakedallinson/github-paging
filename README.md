@@ -1,4 +1,5 @@
 # github-paging
+[![Build Status](https://travis-ci.org/jakedallinson/github-paging.svg?branch=master)](https://travis-ci.org/jakedallinson/github-paging)
 
 A node module for interfacing with paging via the GitHub API
 
