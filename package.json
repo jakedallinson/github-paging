@@ -1,11 +1,12 @@
 {
   "name": "github-paging",
-  "version": "0.1.0",
-  "description": "A module for interfacing for paging with the GitHub API",
+  "version": "0.1.2",
+  "description": "A node module for interfacing with paging via the GitHub API",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "github:jakedallinson/github-paging",
   "author": "Jake Allinson",
   "license": "ISC"
 }
