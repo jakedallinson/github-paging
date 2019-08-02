@@ -1,6 +1,6 @@
 # github-paging
 
-A module for interfacing for paging with the GitHub API
+A node module for interfacing with paging via the GitHub API
 
 ## Overview
 

@@ -8,5 +8,8 @@
   },
   "repository": "github:jakedallinson/github-paging",
   "author": "Jake Allinson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
