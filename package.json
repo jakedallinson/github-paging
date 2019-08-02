@@ -1,10 +1,10 @@
 {
   "name": "github-paging",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "A node module for interfacing with paging via the GitHub API",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": "github:jakedallinson/github-paging",
   "author": "Jake Allinson <jakeallinson03@gmail.com>",
@@ -20,5 +20,9 @@
   ],
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
