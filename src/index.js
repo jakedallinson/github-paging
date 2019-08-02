@@ -1,7 +1,7 @@
 "use strict";
 const request = require('request')
 
-//module.exports = readPages;
+module.exports = readPages;
 
 function readPages(url, callback)
 {

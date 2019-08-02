@@ -1,14 +1,23 @@
 {
   "name": "github-paging",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A node module for interfacing with paging via the GitHub API",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "github:jakedallinson/github-paging",
-  "author": "Jake Allinson",
-  "license": "ISC",
+  "author": "Jake Allinson <jakeallinson03@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "api",
+    "paging",
+    "pagination",
+    "web",
+    "restful",
+    "app"
+  ],
   "dependencies": {
     "request": "^2.88.0"
   }
