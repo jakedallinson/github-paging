@@ -1,34 +1,69 @@
 # github-paging
 [![Build Status](https://travis-ci.org/jakedallinson/github-paging.svg?branch=master)](https://travis-ci.org/jakedallinson/github-paging)
 
-A node module for interfacing with paging via the GitHub API
+A node module for interfacing with paging via the [link](https://developer.github.com/v3/ "GitHub API")
 
-## Overview
-
-If a GH access token is given, then public and private members can be returned from `/orgs/:org/members`
+Available at [link](https://www.npmjs.com/package/github-paging "npm")
 
 ## Installation
 
+This is a Node.js module available through the [link](https://www.npmjs.com "npm") registry. Install using:
+
 `npm i github-paging`
+
+## Features
+
+* Interface with the GitHub API seamlessly for paging
+* With a personal access token from GitHub, get public and private users from an organization
 
 ## Usage
 
-```
-var paging = require('github-paging');
-let url = 'https://api.github.com/orgs/Comcast/members?access_token=' + <access_token> + '&per_page=100'
-paging(url, (err, pages) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log(pages.length);
+```js
+let paging = require('github-paging');
+let options = {
+    url: 'https://api.github.com',
+    headers: {
+        'user-agent': 'github-paging',
+        'Accept': 'application/vnd.github.mercy-preview+json',
+    },
+};
+
+paging(options, (err, pages) => {
+    if (err) { console.log(err); return; }
+    console.log(pages);
 });
 ```
 
+## Other Options
+
+```js
+let options = {
+    url: 'https://api.github.com',
+    proxy: null;
+    qs: {
+        'per_page' : '100', // default is 100
+        'page': '1', // what page to start on
+        'access_token' : '', // personal access token from github
+    },
+    headers: {
+        'user-agent': 'github-paging',
+        'Accept': 'application/vnd.github.mercy-preview+json',
+    },
+};
+```
+
+## Rate Limiting
+
+For unauthenticated requests, GitHub's rate limit allows for up to 60 requests per hour. Use an access_token to make up to 5000 requests per hour.
+
 ## Tests
 
-`no tests available yet`
+To run the test suite, first install the dependencies then run the tests:
+
+`npm install`
+
+`npm test`
 
 ## Contributing
 
-coming soon
+[link](https://github.com/jakedallinson/github-paging/blob/master/CONTRIBUTING.md "Contributing Guide")

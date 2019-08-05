@@ -4,15 +4,36 @@ var expect = require('chai').expect;
 var paging = require('../src/index');
 
 describe('#paging', function() {
-    it('tests are running', function() {
-        let result = 0;
-        expect(result).to.equal(0);
+    it('basic test', function() {
+        let x = 0;
+        expect(x).to.equal(0);
     });
 
-    it('should return 370 members', function() {
-        let url = 'https://api.github.com/orgs/Comcast/members?access_token=' + 'cb06655c524dc615233a0830f93cb68eccca5400' + '&per_page=100'
-        paging(url, (err, pages) => {
-            expect(pages.length).to.equal(370);
+    it('github api is online', function(done) {
+        let options = {
+            url: 'https://api.github.com',
+            headers: {
+                'user-agent': 'github-paging',
+                'Accept': 'application/vnd.github.mercy-preview+json',
+            },
+        }; 
+        paging(options, (err, pages) => {
+            expect(err).to.equal(null);
+            done();
+        });
+    });
+
+    it('paging correctly', function(done) {
+        let options = {
+            url: 'https://api.github.com/orgs/Github/members',
+            headers: {
+                'user-agent': 'github-paging',
+                'Accept': 'application/vnd.github.mercy-preview+json',
+            },
+        }; 
+        paging(options, (err, pages) => {
+            expect(pages.length).to.be.at.least(101);
+            done();
         });
     });
 });
