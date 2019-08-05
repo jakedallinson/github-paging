@@ -1,13 +1,13 @@
 # github-paging
 [![Build Status](https://travis-ci.org/jakedallinson/github-paging.svg?branch=master)](https://travis-ci.org/jakedallinson/github-paging)
 
-A node module for interfacing with paging via the [link](https://developer.github.com/v3/ "GitHub API")
+A node module for interfacing with paging via the [GitHub API](https://developer.github.com/v3/ "GitHub API")
 
-Available at [link](https://www.npmjs.com/package/github-paging "npm")
+Available at [npm](https://www.npmjs.com/package/github-paging "npm")
 
 ## Installation
 
-This is a Node.js module available through the [link](https://www.npmjs.com "npm") registry. Install using:
+This is a Node.js module available through the [npm](https://www.npmjs.com "npm") registry. Install using:
 
 `npm i github-paging`
 
@@ -34,6 +34,10 @@ paging(options, (err, pages) => {
 });
 ```
 
+## Rate Limiting
+
+For unauthenticated requests, GitHub's rate limit allows for up to 60 requests per hour. Use an access_token to make up to 5000 requests per hour.
+
 ## Other Options
 
 ```js
@@ -52,10 +56,6 @@ let options = {
 };
 ```
 
-## Rate Limiting
-
-For unauthenticated requests, GitHub's rate limit allows for up to 60 requests per hour. Use an access_token to make up to 5000 requests per hour.
-
 ## Tests
 
 To run the test suite, first install the dependencies then run the tests:
@@ -66,4 +66,4 @@ To run the test suite, first install the dependencies then run the tests:
 
 ## Contributing
 
-[link](https://github.com/jakedallinson/github-paging/blob/master/CONTRIBUTING.md "Contributing Guide")
+[Contributing Guide](https://github.com/jakedallinson/github-paging/blob/master/CONTRIBUTING.md "Contributing Guide")
