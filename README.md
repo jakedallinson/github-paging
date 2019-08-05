@@ -7,7 +7,7 @@ Available at [npm](https://www.npmjs.com/package/github-paging "npm")
 
 ## Installation
 
-This is a Node.js module available through the [npm](https://www.npmjs.com "npm") registry. Install using:
+This Node.js module is available through the [npm](https://www.npmjs.com "npm") registry. Install using:
 
 `npm i github-paging`
 
@@ -43,11 +43,10 @@ For unauthenticated requests, GitHub's rate limit allows for up to 60 requests p
 ```js
 let options = {
     url: 'https://api.github.com',
-    proxy: null;
+    proxy: null,
     qs: {
-        'per_page' : '100', // default is 100
-        'page': '1', // what page to start on
-        'access_token' : '', // personal access token from github
+        'per_page': '100', // default is 100
+        'access_token': '', // personal access token from github
     },
     headers: {
         'user-agent': 'github-paging',
